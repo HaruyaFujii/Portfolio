@@ -13,7 +13,7 @@ const Hero = () => {
                 <h1 className="text-[#007acc] text-8xl font-bold">Hi, I am</h1>
                 <h1 className="text-[#005f99] text-8xl font-bold">Haruya Fujii</h1>
                 <p className="text-[#333] text-xl mt-4 max-w-[600px] mx-auto">
-                    I am a student of Information Science and Technology, aiming to become an engineer. I would like to improve my skills!
+                    I am a student of Information Science and Technology, aiming to become an engineer. I would like to improve my skills.
                 </p>
                 <Image
                     src={mee}
