@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import project from "../assets/project.png";
 import project1 from "../assets/tsubuyaku.png";
+import project2 from "../assets/ 2025-06-22 20.58.56.png"
 
 const projects = [
     {
@@ -21,6 +22,14 @@ const projects = [
         link: "https://tsubuyaku-app-xifd.vercel.app/",
         git: "https://github.com/HaruyaFujii/tsubuyaku-app",
         src: project1,
+    },
+    {
+        title: "The mobile app for measuring the creativity",
+        desc: "This is a mobile application for my research. This can measure user's creativity and it'll be used for my research topic: In the Wild Exploring the Relationships Between Sleep and Creativity. You can try it scanning QR code which is attached in 'Link'.",
+        devStack: "React Native, Expo, Firebase",
+        link: "https://expo.dev/preview/update?message=fix%3A%20RAT%20timer&updateRuntimeVersion=1.0.0&createdAt=2025-06-22T11%3A29%3A59.357Z&slug=exp&projectId=b4980769-ca33-45b1-8ffc-bd5157d4dc35&group=467fb673-2ebf-465d-8dfb-59000269e632",
+        git: "https://github.com/HaruyaFujii/my-app",
+        src: project2,
     },
 ];
 
