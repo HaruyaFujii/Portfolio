@@ -17,7 +17,7 @@ const projects = [
         src: project,
     },
     {
-        title: "The Tsubuyaku-App for Geek Hackthons",
+        title: "Tsubuyaku",
         desc: "This is a web application deployed by Vercel to translate your normal tweets into unique one using Gemini AI.\n I developed backend sides like API server, routing, responsing and prompt design.",
         devStack: "React JS, Tailwind CSS, Next.js, Gemini API",
         link: "https://tsubuyaku-app-xifd.vercel.app/",
@@ -25,7 +25,7 @@ const projects = [
         src: project1,
     },
     {
-        title: "The mobile app for measuring the creativity",
+        title: "Creativity-App",
         desc: "This is a mobile application for my research. This can measure user's creativity and it'll be used for my research topic: In the Wild Exploring the Relationships Between Sleep and Creativity. You can try it scanning QR code which is attached in 'Link'.",
         devStack: "React Native, Expo, Firebase",
         link: "https://expo.dev/preview/update?message=fix%3A%20RAT%20timer&updateRuntimeVersion=1.0.0&createdAt=2025-06-22T11%3A29%3A59.357Z&slug=exp&projectId=b4980769-ca33-45b1-8ffc-bd5157d4dc35&group=467fb673-2ebf-465d-8dfb-59000269e632",
@@ -33,7 +33,7 @@ const projects = [
         src: project2,
     },
     {
-        title: "ChemiLens for EGH hackathon",
+        title: "ChemiLens",
         desc: "This is a project for finals of EGH hackathon. This integrates chemistry into everyday life and allows learning to be done in a game-like way.",
         devStack: "Flutter, Node.js, Firebase, Gemini API, PubChem",
         link: "https://demo-project-delta-henna.vercel.app/",
