@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -51,6 +51,9 @@ const Header = () => {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent side="right" className="bg-zinc-900 text-white border-zinc-800">
+                                <SheetHeader>
+                                    <SheetTitle className="text-white">ナビゲーション</SheetTitle>
+                                </SheetHeader>
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {navLinks.map((link, index) => (
                                         <a
