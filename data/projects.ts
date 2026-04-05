@@ -35,7 +35,7 @@ export const projects: Project[] = [
     id: "portfolio",
     title: "ポートフォリオサイト",
     description: "Next.jsとTailwind CSSで構築した個人ポートフォリオサイト。開発における初めてのコミットプロジェクト。",
-    thumbnail: "/images/projects/portfolio.png",
+    thumbnail: "/images/projects/profile.png",
     tags: ["Next.js", "Tailwind CSS", "TypeScript"],
     githubUrl: "https://github.com/HaruyaFujii/Portfolio",
     demoUrl: "https://portfolio-haruyafujiis-projects.vercel.app/",
