@@ -14,6 +14,9 @@ const Profile = () => {
                                 src="/images/profile.JPG"
                                 alt="プロフィール写真"
                                 fill
+                                sizes="300px"
+                                loading="eager"
+                                priority
                                 className="object-cover"
                             />
                         </div>

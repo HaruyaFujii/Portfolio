@@ -39,11 +39,26 @@ const Activities = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className={`flex flex-col ${
+                            className={`flex flex-col gap-6 md:gap-8 items-center ${
                                 index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                            } gap-8 items-center`}
+                            }`}
                         >
-                            <div className="flex-1 space-y-3">
+                            {activity.image && (
+                                <div className="w-full md:flex-1">
+                                    <div className="relative w-full h-48 md:h-80">
+                                        <Image
+                                            src={activity.image}
+                                            alt={activity.title}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="object-cover rounded-lg"
+                                            loading={index === 0 ? "eager" : "lazy"}
+                                        />
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="w-full md:flex-1 space-y-3">
                                 <h3 className="text-2xl font-bold text-gray-900">{activity.title}</h3>
                                 <p className="text-sm text-gray-600">{activity.period}</p>
                                 <p className="text-gray-700">{activity.description}</p>
@@ -61,19 +76,6 @@ const Activities = () => {
                                     </a>
                                 )}
                             </div>
-
-                            {activity.image && (
-                                <div className="flex-1">
-                                    <div className="relative w-full h-64 md:h-80">
-                                        <Image
-                                            src={activity.image}
-                                            alt={activity.title}
-                                            fill
-                                            className="object-cover rounded-lg"
-                                        />
-                                    </div>
-                                </div>
-                            )}
                         </motion.div>
                     ))}
                 </div>

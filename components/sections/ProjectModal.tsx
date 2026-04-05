@@ -23,7 +23,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="max-w-[60vw] w-[60vw] max-h-[80vh] overflow-y-auto">
+            <DialogContent className="max-w-[60vw] w-[calc(100vw-8px)] md:w-[60vw] max-h-[85vh] overflow-y-auto m-1 md:m-6">
                 <DialogHeader>
                     <DialogTitle className="text-2xl">{project.title}</DialogTitle>
                     <DialogDescription>{project.date}</DialogDescription>
@@ -36,6 +36,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                                 src={project.thumbnail}
                                 alt={project.title}
                                 fill
+                                sizes="(max-width: 768px) 95vw, 60vw"
                                 className="object-contain rounded-lg"
                             />
                         </div>

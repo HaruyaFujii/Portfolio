@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -10,9 +10,18 @@ import { Project } from '@/types';
 const Works = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-    const sortedProjects = [...projects].sort((a, b) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
+    // Client-side sorting to avoid hydration mismatch
+    const [sortedProjects, setSortedProjects] = useState<Project[]>([]);
+
+    React.useEffect(() => {
+        const sorted = [...projects].sort((a, b) => {
+            // Convert date strings to comparable format
+            const dateA = new Date(a.date.replace(/[年月]/g, '/').replace('日', '').replace('~現在', ''));
+            const dateB = new Date(b.date.replace(/[年月]/g, '/').replace('日', '').replace('~現在', ''));
+            return dateB.getTime() - dateA.getTime();
+        });
+        setSortedProjects(sorted);
+    }, []);
 
     return (
         <section className="bg-gray-50 py-16" id="works">
@@ -33,6 +42,7 @@ const Works = () => {
                                         src={project.thumbnail}
                                         alt={project.title}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover"
                                     />
                                 </div>
