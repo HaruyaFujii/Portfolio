@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "This is my portfolio website.",
+  title: "藤井晴也 ポートフォリオ",
+  description: "情報科学専攻の学生、藤井晴也のポートフォリオサイトです。",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <meta name="robots" content="noindex, nofollow" />
       </head>

@@ -1,21 +1,19 @@
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Profile from "@/components/sections/Profile";
+import Activities from "@/components/sections/Activities";
+import Works from "@/components/sections/Works";
 
 export default function Home() {
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Portfolio/>
-      <Skills/>
-      <Contact/>
-      <Footer/>
-    </>
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        <Profile />
+        <Activities />
+        <Works />
+      </main>
+      <Footer />
+    </div>
   );
 }
