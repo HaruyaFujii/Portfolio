@@ -9,24 +9,35 @@ import {
 } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
 interface ProjectModalProps {
     project: Project | null;
     isOpen: boolean;
     onClose: () => void;
+    currentIndex: number;
+    totalProjects: number;
+    onNext: () => void;
+    onPrevious: () => void;
 }
 
-const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
+const ProjectModal = ({ project, isOpen, onClose, currentIndex, totalProjects, onNext, onPrevious }: ProjectModalProps) => {
+
     if (!project) return null;
+
+    const isFirst = currentIndex <= 0;
+    const isLast = currentIndex >= totalProjects - 1;
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="w-[95vw] max-w-[95vw] md:w-[60vw] md:max-w-[60vw] max-h-[85vh] overflow-y-auto p-4 md:p-6 rounded-lg">
+            <DialogContent className="w-[95vw] max-w-[95vw] md:w-[80vw] md:max-w-[80vw] max-h-[85vh] overflow-y-auto p-4 md:p-6 rounded-lg">
+
                 <DialogHeader>
                     <DialogTitle className="text-xl md:text-2xl">{project.title}</DialogTitle>
-                    <DialogDescription>{project.date}</DialogDescription>
+                    <DialogDescription>
+                        {project.date} • {currentIndex + 1} / {totalProjects}
+                    </DialogDescription>
                 </DialogHeader>
 
                 <div className="space-y-4">
@@ -77,6 +88,27 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                                 </a>
                             </Button>
                         )}
+                    </div>
+
+                    {/* Navigation buttons */}
+                    <div className="flex justify-between pt-4 border-t">
+                        <Button
+                            variant="outline"
+                            onClick={onPrevious}
+                            disabled={isFirst}
+                        >
+                            <ChevronLeft className="mr-2 h-4 w-4" />
+                            前へ
+                        </Button>
+
+                        <Button
+                            variant="outline"
+                            onClick={onNext}
+                            disabled={isLast}
+                        >
+                            次へ
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
                     </div>
                 </div>
             </DialogContent>

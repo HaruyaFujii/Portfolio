@@ -9,19 +9,44 @@ import { Project } from '@/types';
 
 const Works = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [selectedIndex, setSelectedIndex] = useState<number>(-1);
 
     // Client-side sorting to avoid hydration mismatch
-    const [sortedProjects, setSortedProjects] = useState<Project[]>([]);
+    const [sortedProjects, setSortedProjects] = useState<Project[]>(projects);
 
     React.useEffect(() => {
         const sorted = [...projects].sort((a, b) => {
-            // Convert date strings to comparable format
-            const dateA = new Date(a.date.replace(/[年月]/g, '/').replace('日', '').replace('~現在', ''));
-            const dateB = new Date(b.date.replace(/[年月]/g, '/').replace('日', '').replace('~現在', ''));
-            return dateB.getTime() - dateA.getTime();
+            // Simple string comparison for date
+            return b.date.localeCompare(a.date);
         });
         setSortedProjects(sorted);
     }, []);
+
+    const handleProjectSelect = (project: Project, index: number) => {
+        setSelectedProject(project);
+        setSelectedIndex(index);
+    };
+
+    const handleNext = () => {
+        const nextIndex = selectedIndex + 1;
+        if (nextIndex < sortedProjects.length) {
+            setSelectedIndex(nextIndex);
+            setSelectedProject(sortedProjects[nextIndex]);
+        }
+    };
+
+    const handlePrevious = () => {
+        const prevIndex = selectedIndex - 1;
+        if (prevIndex >= 0) {
+            setSelectedIndex(prevIndex);
+            setSelectedProject(sortedProjects[prevIndex]);
+        }
+    };
+
+    const handleClose = () => {
+        setSelectedProject(null);
+        setSelectedIndex(-1);
+    };
 
     return (
         <section className="bg-gray-50 py-16" id="works">
@@ -30,11 +55,11 @@ const Works = () => {
                     Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {sortedProjects.map((project) => (
+                    {sortedProjects.map((project, index) => (
                         <Card
                             key={project.id}
                             className="cursor-pointer hover:shadow-lg transition-shadow overflow-hidden"
-                            onClick={() => setSelectedProject(project)}
+                            onClick={() => handleProjectSelect(project, index)}
                         >
                             {project.thumbnail && (
                                 <div className="relative w-full h-48">
@@ -74,7 +99,11 @@ const Works = () => {
             <ProjectModal
                 project={selectedProject}
                 isOpen={selectedProject !== null}
-                onClose={() => setSelectedProject(null)}
+                onClose={handleClose}
+                currentIndex={selectedIndex >= 0 ? selectedIndex : 0}
+                totalProjects={sortedProjects.length}
+                onNext={handleNext}
+                onPrevious={handlePrevious}
             />
         </section>
     );
