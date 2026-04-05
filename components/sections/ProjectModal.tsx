@@ -36,7 +36,7 @@ const ProjectModal = ({ project, isOpen, onClose, currentIndex, totalProjects, o
                 <DialogHeader>
                     <DialogTitle className="text-xl md:text-2xl">{project.title}</DialogTitle>
                     <DialogDescription>
-                        {project.date} • {currentIndex + 1} / {totalProjects}
+                        {project.date}
                     </DialogDescription>
                 </DialogHeader>
 

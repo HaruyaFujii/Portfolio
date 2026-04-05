@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: "chemilens",
     title: "ChemiLens",
-    description: "EGHハッカソンファイナルのプロジェクト。化学を日常生活に統合し、ゲーム感覚で学習できるアプリケーション。",
+    description: "EGHハッカソンファイナルのプロジェクト。化学を日常生活に落とし込み、ゲーム感覚で学習できるアプリケーション。",
     thumbnail: "/images/projects/chemilens.png",
     tags: ["Flutter", "Node.js", "Firebase", "Gemini API", "PubChem"],
     githubUrl: "https://github.com/HaruyaFujii/ChemiLens",
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: "creativity-app",
     title: "創造性測定アプリ",
-    description: "研究用のモバイルアプリケーション。ユーザーの創造性を測定し、「睡眠と創造性の関係性の調査」という卒業論文の研究テーマで使用。",
+    description: "研究用のモバイルアプリケーション。創造性を測定する課題であり、卒用論文「実環境下における睡眠と創造性の関係性の調査」で使用。",
     thumbnail: "/images/projects/creativity-app.png",
     tags: ["React Native", "Expo", "Firebase"],
     githubUrl: "https://github.com/HaruyaFujii/creativity_app",
@@ -23,8 +23,8 @@ export const projects: Project[] = [
   },
   {
     id: "tsubuyaku",
-    title: "Tsubuyaku",
-    description: "Gemini AIを使用して通常のツイートをユニークなものに翻訳するWebアプリケーション。バックエンド開発（APIサーバー、ルーティング、レスポンス、プロンプト設計）を担当。",
+    title: "つぶ訳",
+    description: "Gemini AIを使用して通常のつぶやきをくすっと笑えるものに翻訳するWebアプリケーション。バックエンド開発（APIサーバー、ルーティング、レスポンス、プロンプト設計）を担当。",
     thumbnail: "/images/projects/tsubuyaku.png",
     tags: ["React", "Tailwind CSS", "Next.js", "Gemini API"],
     githubUrl: "https://github.com/HaruyaFujii/tsubuyaku-app",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: "portfolio",
     title: "ポートフォリオサイト",
-    description: "Next.jsとTailwind CSSで構築した個人ポートフォリオサイト。開発における初めてのコミットプロジェクト。",
+    description: "Next.jsとTailwind CSSで構築した個人ポートフォリオサイト。初めて開発したプロジェクト。",
     thumbnail: "/images/projects/profile.png",
     tags: ["Next.js", "Tailwind CSS", "TypeScript"],
     githubUrl: "https://github.com/HaruyaFujii/Portfolio",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
   {
     id: "LoveTalk",
     title: "恋愛相談型SNS",
-    description: "Next.js, FastAPIを用いて作成した恋愛相談型SNS。現在開発中であり、機能を追加していくつもりである",
+    description: "Next.js, FastAPIを用いて作成した恋愛相談型SNS。現在開発中であり、機能を追加していくつもりである。",
     thumbnail: "/images/projects/Lovetalk.png",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
     githubUrl: "https://github.com/HaruyaFujii/Lovesult",
