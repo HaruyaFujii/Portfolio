@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaTwitter } from 'react-icons/fa';
+import { SiQiita } from "react-icons/si";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -28,13 +29,13 @@ const Footer = () => {
                                 <FaGithub className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://linkedin.com/in/haruyafujii"
+                                href="https://qiita.com/HaruyaFujii"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:text-gray-300 transition-colors"
-                                aria-label="LinkedIn"
+                                aria-label="Qiita"
                             >
-                                <FaLinkedin className="h-5 w-5" />
+                                <SiQiita className="h-5 w-5" />
                             </a>
                             <a
                                 href="https://twitter.com/haruyafujii"
