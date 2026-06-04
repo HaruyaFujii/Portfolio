@@ -61,4 +61,14 @@ export const projects: Project[] = [
     demoUrl: "https://qiita.com/HaruyaFujii/items/ea6d3f53b1b9e03a93cc",
     date: "2026/03",
   },
+  {
+    id: "gemmaid",
+    title: "GemmAId",
+    description: "Kaggle掲載のGoogle主催「The Gemma 4 Good Hackathon」に参加。災害時にオフライン・多言語で動作するAI防災アプリで、画像翻訳機能やRAGによる応急処置検索を実装。",
+    thumbnail: "/images/projects/gemmaid.png",
+    tags: ["React Native", "Gemma 4 E2B/LiteRT-LM", "LiteRT", "Expo", "Typescript", "Python"],
+    githubUrl: "https://github.com/gemma4-hackathon/gemma4_hackathon",
+    demoUrl: "https://youtu.be/fHdXAzbYsHo?si=OE9iM489Y-TA5vrD",
+    date: "2026/05", 
+  }
 ];
