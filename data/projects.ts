@@ -75,7 +75,7 @@ export const projects: Project[] = [
     id: "tsugiau",
     title: "つぎあう",
     description: "遠距離カップル向けのiOSアプリ。企画から設計・開発まで一人で手がけ、2026年10月1日にApp Storeで公開予定。二人で同時に編集できる予定表、再会までのカウントダウン、写真の共有、サブスクリプション課金に対応。Supabase上にデータベース・認証・写真保存・リアルタイム同期を構築し、全テーブルに二人以外は読み書きできないアクセス制御を設定。",
-    thumbnail: "",
+    thumbnail: "/images/projects/tsugiau.png",
     tags: ["React Native", "TypeScript", "Supabase"],
     date: "2026/10",
   }
