@@ -5,6 +5,14 @@ import { motion } from 'framer-motion';
 
 const activities: Activity[] = [
     {
+        id: "internship-akari",
+        title: "燈株式会社 長期インターン",
+        period: "2025年12月〜現在",
+        description: "DX Solutions事業部でソフトウェアエンジニアとして、建設・製造業向けの業務Webアプリをフルスタックで開発しています（TypeScript / React Router、Python / FastAPI、PostgreSQL、AWS、Docker）。案件の詳細は守秘義務のため割愛します。",
+        url: "https://akariinc.co.jp/service/dx",
+        type: "work",
+    },
+    {
         id: "hackathon-egh",
         title: "EGHハッカソン出場",
         period: "2025年9月",
